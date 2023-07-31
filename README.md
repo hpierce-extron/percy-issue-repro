@@ -4,5 +4,5 @@ npm install
 ```
 
 ```
-npm run percy
+PERCY_TOKEN=<YOUR_TOKEN> npm run percy
 ```
