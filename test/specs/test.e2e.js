@@ -1,10 +1,12 @@
-const percySnapshot = require('@percy/webdriverio');
+// const percySnapshot = require('@percy/webdriverio');
+const { percyScreenshot } = require('@percy/selenium-webdriver');
 
-describe('Google', () => {
-    it('Open Google.com', async () => {
+describe('WebdriverIO', () => {
+    it('Open webdriver.io', async () => {
         await browser.url('');
-        const element = $('body > div.L3eUgb > div.o3j99.LLD4me.yr19Zb.LS8OJ > div > img');
+        const element = await $('#docusaurus_skipToContent_fallback > header > div > div.buttons_pzbO > a:nth-child(1)');
         await expect(element).toBeDisplayed();
-        await percySnapshot('Snapshot 1');
+        // await percySnapshot('Snapshot 1');
+        await percyScreenshot(browser, 'screenshot_1');
     })
 })

@@ -50,9 +50,30 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [{
-        browserName: 'chrome'
-    }],
+    // capabilities: [{
+    //     browserName: 'chrome'
+    // }],
+    user: "hudsonpierce_NdjKAZ",  
+    key: "8UfxtpyshFcuhjUixzps",
+
+    capabilities: [
+        // {
+    //     'bstack:options': {
+    //       os: 'Windows',
+    //       osVersion: '11',
+    //       browserVersion: '117.0'
+    //     },
+    //     browserName: 'chrome'
+    //   },
+      {
+        'bstack:options': {
+          os: 'OS X',
+          osVersion: 'Big Sur',
+          browserVersion: 'latest',
+          local: 'false',
+        },
+        browserName: 'Safari'
+      }],
 
     //
     // ===================
@@ -85,7 +106,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'https://www.google.com/',
+    baseUrl: 'https://webdriver.io/',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
